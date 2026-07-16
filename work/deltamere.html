@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Deltamere — an AI sustainability analyst | Vivin R. Nair</title>
+  <meta name="description" content="Case study: Deltamere, an AI sustainability analyst for small ESG and compliance teams, conceived, designed and built end-to-end by Vivin R. Nair.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600&family=DM+Sans:wght@300;400;600&family=Noto+Sans+Mono:wght@300&display=swap">
+  <link rel="stylesheet" href="../css/style.css">
+  <script>
+    (function () {
+      var t = 'auto';
+      try { t = localStorage.getItem('site-theme') || 'auto'; } catch (e) {}
+      var dark = t === 'dark' || (t === 'auto' && matchMedia('(prefers-color-scheme: dark)').matches);
+      document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+    })();
+  </script>
+</head>
+<body>
+
+  <header class="navbar" id="navbar-main">
+    <div class="container navbar-inner">
+      <a href="../index.html" class="navbar-brand">Vivin R. Nair</a>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="navbar-nav" id="navbar-nav">
+        <ul class="nav-links">
+          <li><a href="../index.html#about" class="nav-link">Home</a></li>
+          <li><a href="../index.html#projects" class="nav-link active">Selected work</a></li>
+          <li><a href="../index.html#featured-publications" class="nav-link">Featured writing</a></li>
+          <li><a href="../index.html#posts" class="nav-link">Notes</a></li>
+          <li><a href="../index.html#other-publications" class="nav-link">More publications</a></li>
+        </ul>
+
+        <div class="nav-tools">
+          <div class="theme-menu">
+            <button class="icon-btn" id="theme-toggle" aria-label="Display preferences" title="Display preferences">
+              <svg viewBox="0 0 24 24" width="18" height="18"><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="2.5" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="21.5"/><line x1="2.5" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="21.5" y2="12"/><line x1="5.3" y1="5.3" x2="7" y2="7"/><line x1="17" y1="17" x2="18.7" y2="18.7"/><line x1="5.3" y1="18.7" x2="7" y2="17"/><line x1="17" y1="7" x2="18.7" y2="5.3"/></g></svg>
+            </button>
+            <div class="theme-dropdown" id="theme-dropdown" hidden>
+              <button data-theme-choice="light">Light</button>
+              <button data-theme-choice="dark">Dark</button>
+              <button data-theme-choice="auto">Automatic</button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="home-section">
+      <div class="container section-grid">
+        <div>
+          <p class="case-kicker">Build &middot; 2026</p>
+          <h1 class="section-heading">Deltamere</h1>
+          <p class="section-sub">An AI sustainability analyst for teams of one.</p>
+        </div>
+
+        <div>
+          <p class="case-lede">
+            Inside most mid-caps, ESG compliance lands on one person. BRSR Core in one tab,
+            a buyer&rsquo;s 200-question audit due Friday in another, a CBAM email from a German
+            customer nobody knows how to answer. The problem isn&rsquo;t a lack of information &mdash;
+            it&rsquo;s that none of it is <em>about your company</em>.
+          </p>
+
+          <div class="case-block">
+            <h2>What it does</h2>
+            <p class="bio">
+              Deltamere reads a company&rsquo;s profile &mdash; listing status, sector, revenue, export
+              markets, key customers &mdash; and filters roughly 200 regulations and frameworks down
+              to the ten that actually apply. Each obligation becomes dated, ordered work on a
+              living calendar; when a rule changes, the right item updates. Then it does the part
+              nobody else does: drafting the disclosure narratives and pre-filling EcoVadis, CDP
+              and buyer questionnaires from the stored profile.
+            </p>
+          </div>
+
+          <div class="case-block">
+            <h2>My role</h2>
+            <p class="bio">
+              Conceived, designed and built end-to-end &mdash; the regulatory logic (BRSR, CSRD, CBAM,
+              EUDR, EcoVadis, CDP), the product architecture, the copy, the landing page and the
+              30-second intro film below. It draws directly on running enterprise ESG at UST:
+              every feature answers a pain I have personally sat inside.
+            </p>
+          </div>
+
+          <div class="case-block">
+            <h2>See it as built</h2>
+            <div class="case-actions">
+              <a class="btn btn-outline btn-lg" href="../deltamere/index.html"><svg viewBox="0 0 24 24"><rect x="3.5" y="4.5" width="17" height="15" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><line x1="3.5" y1="9" x2="20.5" y2="9" stroke="currentColor" stroke-width="2"/></svg>Open the product site</a>
+              <a class="btn btn-outline btn-lg" href="../deltamere/animatic.html"><svg viewBox="0 0 24 24"><polygon points="9,7 17,12 9,17" fill="currentColor"/></svg>Watch the 30s animatic</a>
+            </div>
+            <p class="case-note">Both open the original artefacts, byte-for-byte as designed &mdash; the craft is the evidence.</p>
+            <!-- VERIFY: public status — if deltamere.io is live, add a third button linking out. -->
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2020&ndash;2026 Vivin R. Nair. This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>.</p>
+      <p><a href="../index.html#projects">&larr; Back to selected work</a> &nbsp;&middot;&nbsp; Next: <a href="leip.html">LEIP &mdash; economic intelligence for Indian cities</a></p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

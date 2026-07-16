@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vivin R. Nair | Sustainability, ESG &amp; Economic Development</title>
+  <meta name="description" content="Vivin R. Nair builds systems where sustainability policy meets technology — enterprise ESG at UST, the Deltamere AI sustainability analyst, and economic intelligence platforms for Indian cities. WEF Agenda contributor. LSE MSc in Local Economic Development.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600&family=DM+Sans:wght@300;400;600&family=Noto+Sans+Mono:wght@300&display=swap">
+  <!-- Icons: same libraries as the reference site (Font Awesome 6 + Academicons). -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.4/css/academicons.min.css" integrity="sha512-IW0nhlW5MgNydsXJO40En2EoCkTTjZhI3yuODrZIc8cQ4h1XcF53PsqDHa09NqnkXuIe0Oiyyj171BqZFwISBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    /* Apply the saved theme before first paint to avoid a flash.
+       (Storage access is wrapped so the page also works where localStorage
+       is blocked — private windows, sandboxed previews, file://). */
+    (function () {
+      var t = 'auto';
+      try { t = localStorage.getItem('site-theme') || 'auto'; } catch (e) {}
+      var dark = t === 'dark' || (t === 'auto' && matchMedia('(prefers-color-scheme: dark)').matches);
+      document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- ======================= NAVBAR ======================= -->
+  <header class="navbar" id="navbar-main">
+    <div class="container navbar-inner">
+      <a href="#" class="navbar-brand">Vivin R. Nair</a>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="navbar-nav" id="navbar-nav">
+        <ul class="nav-links">
+          <li><a href="#about" class="nav-link active">Home</a></li>
+          <li><a href="#projects" class="nav-link">Highlights</a></li>
+          <li><a href="#featured-publications" class="nav-link">Featured writing</a></li>
+          <li><a href="#posts" class="nav-link">Recent Posts</a></li>
+          <li><a href="#other-publications" class="nav-link">More publications</a></li>
+        </ul>
+
+        <div class="nav-tools">
+          <button class="icon-btn" id="search-open" aria-label="Search" title="Search">
+            <i class="fas fa-magnifying-glass" aria-hidden="true"></i>
+          </button>
+
+          <div class="theme-menu">
+            <button class="icon-btn" id="theme-toggle" aria-label="Display preferences" title="Display preferences">
+              <i class="fas fa-moon" aria-hidden="true"></i>
+            </button>
+            <div class="theme-dropdown" id="theme-dropdown" hidden>
+              <button data-theme-choice="light">Light</button>
+              <button data-theme-choice="dark">Dark</button>
+              <button data-theme-choice="auto">Automatic</button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ======================= SEARCH OVERLAY ======================= -->
+  <div class="search-overlay" id="search-overlay" hidden>
+    <div class="container">
+      <div class="search-header">
+        <h1>Search</h1>
+        <button class="icon-btn" id="search-close" aria-label="Close search"><i class="fas fa-circle-xmark" aria-hidden="true"></i></button>
+      </div>
+      <input type="search" class="search-input" placeholder="Search this site..." aria-label="Search">
+      <p class="search-hint">Search will be wired up in a later pass — everything on this page is one scroll away.</p>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ======================= ABOUT / BIOGRAPHY ======================= -->
+    <section id="about" class="home-section">
+      <div class="container about-grid">
+
+        <div class="about-sidebar">
+          <img src="images/vivichan.jpeg" alt="Portrait of Vivin R. Nair" class="avatar" width="800" height="800" decoding="async">
+          <h2 class="person-name">Vivin Rajasekharan Nair</h2>
+          <h3 class="person-role">Global Program Manager - Sustainability, UST</h3>
+          <h3 class="person-org"><a href="https://www.weforum.org/stories/authors/vivin-r-nair/">World Economic Forum &middot; Agenda Contributor &amp; Global Shaper</a></h3>
+          <h3 class="person-org"><a href="https://www.lse.ac.uk/geography-and-environment">LSE &middot; MSc Local Economic Development</a></h3>
+
+          <ul class="social-links" aria-label="Social links">
+            <li><a href="mailto:vivinnair@outlook.com" aria-label="Email" title="Email">
+              <i class="fas fa-envelope" aria-hidden="true"></i>
+            </a></li>
+            <li><a href="https://www.linkedin.com/in/vivinrnair" aria-label="LinkedIn profile" title="LinkedIn">
+              <i class="fab fa-linkedin" aria-hidden="true"></i>
+            </a></li>
+            <li><a href="https://www.weforum.org/stories/authors/vivin-r-nair/" aria-label="World Economic Forum author profile" title="WEF Agenda">
+              <i class="fas fa-globe" aria-hidden="true"></i>
+            </a></li>
+            <!-- TODO-ASSET: point this at the final CV PDF, e.g. cv/vivin-nair-cv.pdf -->
+            <li><a href="#" aria-label="Download CV (PDF)" title="CV (PDF)">
+              <i class="fas fa-file-invoice" aria-hidden="true"></i>
+            </a></li>
+          </ul>
+        </div>
+
+        <div class="about-body">
+          <h1 class="greeting">Hi, I&rsquo;m Vivin! &#128075;</h1>
+          <p class="bio">
+            I work where <strong>policy meets technology</strong> - a sustainability and
+            development professional by trade, a builder by instinct. At UST, a global firm of
+            30,000+ people, I lead the enterprise sustainability programme - carbon accounting
+            across 30+ countries, science-based targets, and the reporting machinery behind CSRD,
+            CDP and EcoVadis. I keep a close tab on where the rules are heading - CBAM, EUDR,
+            BRSR. That&rsquo;s the problem I most recently built for: <strong>Deltamere</strong>, a
+            sustainability engine that tells small ESG teams exactly which regulations apply to
+            them, what changed, and what to do by when.
+          </p>
+          <p class="bio">
+            The habit under all of it is <strong>research</strong>. I came to sustainability from
+            economic geography - my MSc at LSE examined how governments grow and sustain
+            technology clusters, and I still work the way it taught me: read a problem closely, then
+            write to think it through. That writing runs from an Elsevier book chapter on data-driven
+            urban economies to essays on AI governance and development for the
+            <strong>World Economic Forum</strong>, published in English and Spanish. Much of my work
+            has lived in and around government at national, state and city level: a fellowship at
+            India&rsquo;s Ministry of Housing &amp; Urban Affairs, where I built <strong>LEIP</strong>,
+            an economic intelligence platform that helped a city of 3.8&nbsp;million read its own
+            economy. Outside that, I curate my city&rsquo;s Global Shapers hub, where we co-founded a
+            health consortium that channelled &#8377;4M into public hospitals.
+          </p>
+
+          <div class="cv-grid">
+            <div class="cv-block">
+              <h2 class="cv-title">Experience</h2>
+              <ul class="cv-list">
+                <li>
+                  <i class="cv-icon fas fa-briefcase" aria-hidden="true"></i>
+                  <div>
+                    <h3>UST - Global Program Manager, Sustainability</h3>
+                    <p class="cv-loc">2024&ndash;present &middot; Trivandrum, India</p>
+                  </div>
+                </li>
+                <li>
+                  <i class="cv-icon fas fa-briefcase" aria-hidden="true"></i>
+                  <div>
+                    <h3>Ministry of Housing &amp; Urban Affairs - India Smart Cities Fellow</h3>
+                    <p class="cv-loc">2020&ndash;2021 &middot; New Delhi, India</p>
+                  </div>
+                </li>
+                <li>
+                  <i class="cv-icon fas fa-briefcase" aria-hidden="true"></i>
+                  <div>
+                    <!-- VERIFY: curator term — CV says Apr 2023–Jan 2024; LinkedIn says '24 / 2024–25 -->
+                    <h3>Global Shapers (World Economic Forum) - Curator, Thiruvananthapuram Hub</h3>
+                    <p class="cv-loc">2023&ndash;2024 &middot; Thiruvananthapuram, India</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="cv-block">
+              <h2 class="cv-title">Education</h2>
+              <ul class="cv-list">
+                <li>
+                  <i class="cv-icon fas fa-graduation-cap" aria-hidden="true"></i>
+                  <div>
+                    <h3>Exec. Programme, Sustainability Reporting &amp; ESG Data, 2025</h3>
+                    <p class="cv-loc">Sa&iuml;d Business School, University of Oxford</p>
+                  </div>
+                </li>
+                <li>
+                  <i class="cv-icon fas fa-graduation-cap" aria-hidden="true"></i>
+                  <div>
+                    <h3>MSc Local Economic Development, 2019</h3>
+                    <p class="cv-loc">London School of Economics and Political Science</p>
+                  </div>
+                </li>
+                <li>
+                  <i class="cv-icon fas fa-graduation-cap" aria-hidden="true"></i>
+                  <div>
+                    <h3>BA Economics, Political Science &amp; History, 2018</h3>
+                    <p class="cv-loc">Christ University, Bengaluru &middot; Merit Scholar</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================= SELECTED WORK (horizontal scroller) ======================= -->
+    <section id="projects" class="home-section">
+      <div class="container section-grid">
+        <div>
+          <h1 class="section-heading">Highlights</h1>
+        </div>
+
+        <div class="work-scroller-wrap">
+          <div class="scroller-nav">
+            <button class="scroller-btn" id="work-prev" aria-label="Scroll to previous work" disabled>
+              <i class="fas fa-angle-left" aria-hidden="true"></i>
+            </button>
+            <button class="scroller-btn" id="work-next" aria-label="Scroll to next work">
+              <i class="fas fa-angle-right" aria-hidden="true"></i>
+            </button>
+          </div>
+
+          <div class="work-scroller" id="work-scroller" tabindex="0" role="group" aria-label="Highlights, horizontally scrollable list of four items">
+
+            <!-- 1 · DELTAMERE -->
+            <article class="card work-card">
+              <div class="card-image">
+                <!-- TODO-ASSET: replace src with a real product screenshot, e.g. images/deltamere-shot.png -->
+                <img src="images/dm2.png" alt="Deltamere product interface (screenshot to be added)">
+              </div>
+              <div class="card-text">
+                <p class="work-kicker">Build &middot; 2026</p>
+                <h2><a href="work/deltamere.html">Deltamere - an AI sustainability analyst</a></h2>
+                <p>Inside most mid-caps, one person handles ESG compliance alone. Deltamere reads a company&rsquo;s profile, filters ~200 frameworks down to the ten that apply, and turns each into dated work - then drafts the disclosures. Conceived, designed and built end-to-end.</p>
+                <div class="work-links">
+                  <a class="btn btn-outline btn-sm" href="deltamere/index.html"><i class="fas fa-window-maximize" aria-hidden="true"></i>Product site</a>
+                  <a class="btn btn-outline btn-sm" href="deltamere/animatic.html"><i class="fas fa-play" aria-hidden="true"></i>30s animatic</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 2 · SUMMER DAVOS (photo box) -->
+            <article class="card work-card">
+              <div class="card-image">
+                <!-- TODO-ASSET: THE hero photo — Vivin at AMNC (Summer Davos), Tianjin. Replace src, keep alt honest. -->
+                <!-- VERIFY: attendance year (2025 assumed; CV doesn't state it) -->
+                <img src="images/amnc.jpeg" alt="Vivin at the Annual Meeting of the New Champions in Tianjin (photo to be added)">
+              </div>
+              <div class="card-text">
+                <p class="work-kicker">Moment &middot; 2025</p>
+                <h2>Summer Davos, Tianjin</h2>
+                <p>One of 60 Global Shapers worldwide selected for the World Economic Forum&rsquo;s Annual Meeting of the New Champions - carrying a Global-South view of AI, sustainability and development into the room.</p>
+              </div>
+            </article>
+
+            <!-- 3 · LEIP -->
+            <article class="card work-card">
+              <div class="card-image">
+                <!-- TODO-ASSET: replace src with a LEIP screenshot (treemap or shift-share chart) -->
+                <img src="images/leip.png" alt="LEIP platform charts (screenshot to be added)">
+              </div>
+              <div class="card-text">
+                <p class="work-kicker">Build &amp; research &middot; 2020&ndash;21</p>
+                <h2><a href="work/leip.html">LEIP - economic intelligence for Indian cities</a></h2>
+                <p>Indian cities generate much of the country&rsquo;s GDP but plan little of their own economies. As an India Smart Cities Fellow I co-built LEIP - cluster mapping, location quotients and a decision-support system - piloted for Thiruvananthapuram&rsquo;s 3.8&nbsp;million residents.</p>
+                <div class="work-links">
+                  <a class="btn btn-outline btn-sm" href="work/leip.html"><i class="fas fa-file-lines" aria-hidden="true"></i>Case study</a>
+                  <a class="btn btn-outline btn-sm" href="https://www.sciencedirect.com/science/chapter/edited-volume/abs/pii/B9780323995030000053"><i class="fas fa-book" aria-hidden="true"></i>Book chapter</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 4 · WEF AGENDA WRITING -->
+            <article class="card work-card">
+              <div class="card-image">
+                <!-- TODO-ASSET: replace src with a LEIP screenshot (treemap or shift-share chart) -->
+                <img src="images/wef.svg" alt="LEIP platform charts (screenshot to be added)">
+              </div>
+              <div class="card-text">
+                <p class="work-kicker">Writing &middot; 2020&ndash;2026</p>
+                <h2><a href="https://www.weforum.org/stories/authors/vivin-r-nair/">WEF Agenda contributor</a></h2>
+                <p>Articles for the World Economic Forum on AI governance, land, decentralisation and youth-led innovation - published in English and Spanish and carried on WEF&rsquo;s Asia edition.</p>
+                <div class="work-links">
+                  <a class="btn btn-outline btn-sm" href="#featured-publications"><i class="fas fa-angle-down" aria-hidden="true"></i>All essays</a>
+                  <a class="btn btn-outline btn-sm" href="https://www.weforum.org/stories/authors/vivin-r-nair/"><i class="fas fa-link" aria-hidden="true"></i>Author page</a>
+                </div>
+              </div>
+            </article>
+
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= FEATURED WRITING ======================= -->
+    <section id="featured-publications" class="home-section">
+      <div class="container section-grid">
+        <h1 class="section-heading">Featured writing</h1>
+        <div class="card-stack">
+
+          <article class="card pub-card">
+            <div class="card-text">
+              <p class="pub-authors"><strong>Vivin R. Nair</strong></p>
+              <p class="pub-meta">March 2026 &nbsp;&middot;&nbsp; <em>World Economic Forum - Agenda</em> &nbsp;&middot;&nbsp; English / Espa&ntilde;ol</p>
+              <h2><a href="https://www.weforum.org/stories/all/ai-cognition-infrastructure-future-governance-decisions/">Why governing AI means governing cognition</a></h2>
+              <p class="pub-abstract">As AI shifts from technical tool to infrastructure for societal decision-making, governance has to adapt to govern cognition itself - not just models.</p>
+              <div class="pub-links">
+                <a class="btn btn-outline btn-sm" href="https://www.weforum.org/stories/all/ai-cognition-infrastructure-future-governance-decisions/"><i class="fas fa-link" aria-hidden="true"></i>Read</a>
+                <a class="btn btn-outline btn-sm" href="https://es.weforum.org/stories/all/por-que-gobernar-la-ia-significa-gobernar-la-cognicion/"><i class="fas fa-globe" aria-hidden="true"></i>Espa&ntilde;ol</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card pub-card">
+            <div class="card-text">
+              <p class="pub-authors"><strong>Vivin R. Nair</strong></p>
+              <p class="pub-meta">August 2025 &nbsp;&middot;&nbsp; <em>World Economic Forum - Agenda</em> &nbsp;&middot;&nbsp; English / Espa&ntilde;ol</p>
+              <h2><a href="https://www.weforum.org/stories/economic-growth/youth-global-south-social-innovation/">From hustle culture to systems change: how youth in the Global South can lead social innovation</a></h2>
+              <p class="pub-abstract">Young people in the Global South can spearhead social innovation - if capital, community and context-sensitive education back them.</p>
+              <div class="pub-links">
+                <a class="btn btn-outline btn-sm" href="https://www.weforum.org/stories/economic-growth/youth-global-south-social-innovation/"><i class="fas fa-link" aria-hidden="true"></i>Read</a>
+                <a class="btn btn-outline btn-sm" href="https://es.weforum.org/stories/economic-growth/como-los-jovenes-del-sur-global-pueden-liderar-en-innovacion-social/"><i class="fas fa-globe" aria-hidden="true"></i>Espa&ntilde;ol</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card pub-card">
+            <div class="card-text">
+              <p class="pub-authors"><strong>Vivin R. Nair</strong></p>
+              <p class="pub-meta">2020 &nbsp;&middot;&nbsp; <em>World Economic Forum - Agenda</em></p>
+              <h2><a href="https://www.weforum.org/stories/geo-economics-and-politics/decentralization-panacea-development/">Is decentralization a panacea for development?</a></h2>
+              <!-- VERIFY: abstract wording -->
+              <p class="pub-abstract">Decentralization is widely prescribed as a route to better development outcomes - but whether it delivers turns on local capacity, accountability and how power is actually devolved.</p>
+              <div class="pub-links">
+                <a class="btn btn-outline btn-sm" href="https://www.weforum.org/stories/geo-economics-and-politics/decentralization-panacea-development/"><i class="fas fa-link" aria-hidden="true"></i>Read</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card pub-card">
+            <div class="card-text">
+              <p class="pub-authors">Radha Karmarkar, Aman Singh Rajput, <strong>Vivin R. Nair</strong></p>
+              <p class="pub-meta">Book chapter &nbsp;&middot;&nbsp; 2023 &nbsp;&middot;&nbsp; <em>Artificial Intelligence and Machine Learning in Smart City Planning</em>, Elsevier &nbsp;&middot;&nbsp; pp. 45&ndash;70</p>
+              <h2><a href="https://www.sciencedirect.com/science/chapter/edited-volume/abs/pii/B9780323995030000053">Powering data-driven decision-making for the development of urban economies in India</a></h2>
+              <p class="pub-abstract">How city governments can use structured data - taxation, employment, trade flows - to plan local economies, drawing on the LEIP pilot in Thiruvananthapuram.</p>
+              <div class="pub-links">
+                <button class="btn btn-outline btn-sm js-cite" data-cite="elsevier-urban"><i class="fas fa-quote-right" aria-hidden="true"></i>Cite</button>
+                <a class="btn btn-outline btn-sm" href="https://www.sciencedirect.com/science/chapter/edited-volume/abs/pii/B9780323995030000053"><i class="ai ai-doi" aria-hidden="true"></i>DOI</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= NOTES ======================= -->
+    <section id="posts" class="home-section">
+      <div class="container section-grid">
+        <h1 class="section-heading">Recent Posts</h1>
+        <div class="card-stack">
+
+          <article class="card">
+            <div class="card-text">
+              <h2><a href="#">Building Deltamere: what a compliance team of one taught me about AI products</a></h2>
+              <p class="post-date">Draft - coming soon</p>
+              <p>Two hundred frameworks, one overwhelmed person, and the product decisions that followed.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-text">
+              <h2><a href="#">Notes from Tianjin: inside Summer Davos 2025</a></h2>
+              <p class="post-date">Draft - coming soon</p>
+              <p>What sixty Global Shapers talked about when nobody was on stage.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-text">
+              <h2><a href="#">What a city of 3.8 million taught me about measuring local economies</a></h2>
+              <p class="post-date">Draft - coming soon</p>
+              <p>Location quotients, GST trails and the case for giving cities their own economic instruments.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= MORE PUBLICATIONS ======================= -->
+    <section id="other-publications" class="home-section">
+      <div class="container section-grid">
+        <h1 class="section-heading">More publications</h1>
+        <ul class="pub-list">
+
+          <li class="pub-list-item">
+            <p class="citation">Nair, V. R. (2025). &ldquo;The future of land use is local: harnessing community ownership for urban land regeneration.&rdquo; <em>World Economic Forum - Asia edition</em>.</p>
+            <div class="pub-links">
+              <a class="btn btn-outline btn-sm" href="https://www.weforumasia.cn/stories/urban-transformation/the-future-of-land-use-is-local-harnessing-community-ownership-for-urban-regeneration/"><i class="fas fa-link" aria-hidden="true"></i>Read</a>
+            </div>
+          </li>
+
+          <li class="pub-list-item">
+            <p class="citation">Nair, V. R. (2020). &ldquo;Technology and Economy.&rdquo; <em>ISCF Digest</em>, National Institute of Urban Affairs.</p>
+            <div class="pub-links">
+              <!-- TODO-LINK: PDF or NIUA page once located -->
+              <a class="btn btn-outline btn-sm" href="#"><i class="fas fa-file-pdf" aria-hidden="true"></i>PDF</a>
+            </div>
+          </li>
+
+          <li class="pub-list-item">
+            <p class="citation">Nair, V. R. (2019). &ldquo;The Role of Government in the Evolution and Sustenance of IT Clusters in India: Evidence from Trivandrum and Bangalore.&rdquo; <em>MSc dissertation</em>, London School of Economics and Political Science.</p>
+            <div class="pub-links">
+              <!-- TODO-LINK: dissertation PDF if shareable -->
+              <a class="btn btn-outline btn-sm" href="#"><i class="fas fa-file-pdf" aria-hidden="true"></i>PDF</a>
+            </div>
+          </li>
+
+          <li class="pub-list-item">
+            <p class="citation">Rajput, A. S., Karmarkar, R., Nair, V. R. (2021). &ldquo;Local Economic Intelligence Platform.&rdquo; <em>India Smart Cities Fellowship</em>, Ministry of Housing &amp; Urban Affairs.</p>
+            <div class="pub-links">
+              <a class="btn btn-outline btn-sm" href="work/leip.html"><i class="fas fa-file-lines" aria-hidden="true"></i>Case study</a>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================= CITE MODAL ======================= -->
+  <div class="modal-backdrop" id="cite-modal" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="cite-modal-title">
+      <div class="modal-header">
+        <h2 id="cite-modal-title">Cite</h2>
+        <button class="icon-btn" id="cite-close" aria-label="Close"><i class="fas fa-circle-xmark" aria-hidden="true"></i></button>
+      </div>
+      <pre class="cite-text" id="cite-text">@incollection{karmarkar_powering_2023,
+  author    = {Karmarkar, Radha and Rajput, Aman Singh and Nair, Vivin R.},
+  title     = {Powering data-driven decision-making for the development of urban economies in India},
+  booktitle = {Artificial Intelligence and Machine Learning in Smart City Planning},
+  editor    = {Basetti, Vedik and Shiva, Chandan Kumar and Ungarala, Mohan Rao and Rangarajan, Shriram S.},
+  publisher = {Elsevier},
+  year      = {2023},
+  pages     = {45--70},
+  isbn      = {9780323995030},
+  doi       = {10.1016/B978-0-323-99503-0.00005-3}
+}</pre>
+      <div class="modal-footer">
+        <button class="btn btn-outline btn-sm" id="cite-copy">Copy</button>
+        <a class="btn btn-outline btn-sm" href="#" download>Download BibTeX</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================= FOOTER ======================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2020&ndash;2026 Vivin R. Nair. This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>.</p>
+      <!-- <p>Hand-built - no framework, no build step. Nudged into existence by a friend who insisted a CV wasn&rsquo;t enough.</p> -->
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

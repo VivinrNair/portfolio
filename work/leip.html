@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LEIP — economic intelligence for Indian cities | Vivin R. Nair</title>
+  <meta name="description" content="Case study: the Local Economic Intelligence Platform (LEIP), built under the India Smart Cities Fellowship — cluster mapping, location quotients, shift-share analysis and a decision-support system, piloted in Thiruvananthapuram.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600&family=DM+Sans:wght@300;400;600&family=Noto+Sans+Mono:wght@300&display=swap">
+  <link rel="stylesheet" href="../css/style.css">
+  <script>
+    (function () {
+      var t = 'auto';
+      try { t = localStorage.getItem('site-theme') || 'auto'; } catch (e) {}
+      var dark = t === 'dark' || (t === 'auto' && matchMedia('(prefers-color-scheme: dark)').matches);
+      document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+    })();
+  </script>
+</head>
+<body>
+
+  <header class="navbar" id="navbar-main">
+    <div class="container navbar-inner">
+      <a href="../index.html" class="navbar-brand">Vivin R. Nair</a>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="navbar-nav" id="navbar-nav">
+        <ul class="nav-links">
+          <li><a href="../index.html#about" class="nav-link">Home</a></li>
+          <li><a href="../index.html#projects" class="nav-link active">Selected work</a></li>
+          <li><a href="../index.html#featured-publications" class="nav-link">Featured writing</a></li>
+          <li><a href="../index.html#posts" class="nav-link">Notes</a></li>
+          <li><a href="../index.html#other-publications" class="nav-link">More publications</a></li>
+        </ul>
+
+        <div class="nav-tools">
+          <div class="theme-menu">
+            <button class="icon-btn" id="theme-toggle" aria-label="Display preferences" title="Display preferences">
+              <svg viewBox="0 0 24 24" width="18" height="18"><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="2.5" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="21.5"/><line x1="2.5" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="21.5" y2="12"/><line x1="5.3" y1="5.3" x2="7" y2="7"/><line x1="17" y1="17" x2="18.7" y2="18.7"/><line x1="5.3" y1="18.7" x2="7" y2="17"/><line x1="17" y1="7" x2="18.7" y2="5.3"/></g></svg>
+            </button>
+            <div class="theme-dropdown" id="theme-dropdown" hidden>
+              <button data-theme-choice="light">Light</button>
+              <button data-theme-choice="dark">Dark</button>
+              <button data-theme-choice="auto">Automatic</button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="home-section">
+      <div class="container section-grid">
+        <div>
+          <p class="case-kicker">Build &amp; research &middot; 2020&ndash;21</p>
+          <h1 class="section-heading">LEIP</h1>
+          <p class="section-sub">Local Economic Intelligence Platform &middot; India Smart Cities Fellowship, Ministry of Housing &amp; Urban Affairs</p>
+        </div>
+
+        <div>
+          <p class="case-lede">
+            India&rsquo;s 74th Constitutional Amendment handed cities the mandate to plan their own
+            social and economic development. Three decades on, most still can&rsquo;t: economic plans
+            are written at state and national level, and no city-level instrument existed to read
+            a local economy. LEIP was built to be that instrument.
+          </p>
+
+          <div class="case-block">
+            <h2>What it does</h2>
+            <p class="bio">
+              A Rapid Economic Assessment scores the city against four pillars &mdash; human capital,
+              investment, infrastructure and policy. GST transaction and e-way-bill data map the
+              city&rsquo;s economic clusters and their forward and backward linkages. Employment data
+              feeds location quotients and shift-share analysis &mdash; the core toolkit of economic
+              geography &mdash; to reveal where the city holds genuine comparative advantage. A
+              decision-support system then turns all of it into intervention direction: which
+              sectors are viable, which pillar needs work, and how exposed the economy is.
+            </p>
+          </div>
+
+          <div class="case-block">
+            <h2>The pilot: Thiruvananthapuram, 3.8 million residents</h2>
+            <p class="bio">
+              The numbers told a sharp story. The city scored strongest on human capital (72/100)
+              and weakest on infrastructure (43/100). Computer programming and consultancy showed
+              a location quotient of 10.08 &mdash; ten times the state&rsquo;s employment share, a
+              genuinely specialised cluster. And with the top five sectors holding 70.97% of gross
+              value added, the economy classed as low-resilience: too much riding on too few
+              sectors. Each finding pointed at a decision a city government could actually take.
+            </p>
+            <!-- TODO-ASSET: replace with real LEIP screenshots (treemap, shift-share quadrants) -->
+            <img src="../images/inside_leip.png" alt="LEIP platform charts (screenshots to be added)" style="border: 1px solid var(--card-border); border-radius: 3px; margin-top: 0.5rem;">
+          </div>
+
+          <div class="case-block">
+            <h2>Why it matters for economic geography</h2>
+            <p class="bio">
+              LEIP is applied economic geography: cluster theory, location quotients and
+              shift-share made operational inside a government, on live administrative data,
+              for a real city. It is the working bridge between my LSE research on how
+              governments sustain technology clusters and the AI-for-regulation systems I
+              build today.
+            </p>
+          </div>
+
+          <div class="case-block">
+            <h2>Team &amp; credits</h2>
+            <p class="case-credits">
+              Built with Aman Singh Rajput and Radha Karmarkar. Mentors: Dr Debjani Ghosh
+              (National Institute of Urban Affairs) and Dr Amit Kapoor (Institute for
+              Competitiveness). Published as a book chapter, <em>Data-Driven Decision Making
+              for Urban Economies</em>, Elsevier.
+            </p>
+            <div class="case-actions">
+              <a class="btn btn-outline btn-lg" href="https://www.sciencedirect.com/science/chapter/edited-volume/abs/pii/B9780323995030000053"><svg viewBox="0 0 24 24"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 0-3 3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M19 20V7" stroke="currentColor" stroke-width="2"/></svg>Book chapter</a>
+              <!-- VERIFY: is http://leip.smartcitytvm.in/ still live? If yes, uncomment:
+              <a class="btn btn-outline btn-lg" href="http://leip.smartcitytvm.in/">Live platform</a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2020&ndash;2026 Vivin R. Nair. This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>.</p>
+      <p><a href="../index.html#projects">&larr; Back to selected work</a> &nbsp;&middot;&nbsp; Previous: <a href="deltamere.html">Deltamere &mdash; an AI sustainability analyst</a></p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

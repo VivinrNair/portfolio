@@ -1,0 +1,571 @@
+/* ==========================================================================
+   Academic portfolio — placeholder template
+   Original stylesheet. Design tokens (colors, fonts, sizes) follow the
+   reference site's palette: plum primary, Libre Franklin body text,
+   DM Sans headings, charcoal dark mode with cream accents.
+   Dark mode is applied with [data-theme="dark"] on <html> (set by
+   js/main.js, which also honors the OS preference in "automatic" mode).
+   ========================================================================== */
+
+:root {
+  --font-body: "Libre Franklin", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-head: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-mono: "Noto Sans Mono", SFMono-Regular, Menlo, Consolas, monospace;
+
+  --primary: #5a464c;            /* plum accent: links, buttons */
+  --link-hover: #2f2528;
+  --btn-hover-bg: #5a464c;
+  --btn-hover-text: #fff;
+
+  --bg: #fff;
+  --section-bg: #fefefe;
+  --card-bg: #fff;
+  --card-border: rgba(0, 0, 0, 0.09);
+  --card-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+
+  --text: #212529;
+  --text-muted: #6c757d;
+  --heading: #212529;
+  --border: #dee2e6;
+  --code-bg: #f3f6ee;
+
+  --navbar-bg: #fefefe;
+  --navbar-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.11);
+  --navbar-link: rgba(62, 61, 61, 0.85);
+  --navbar-link-active: #3e3d3d;
+  --footer-text: rgba(0, 0, 0, 0.54);
+
+  --navbar-h: 70px;
+}
+
+[data-theme="dark"] {
+  --primary: #f3f6ee;            /* cream accent in dark mode */
+  --link-hover: #fff;
+  --btn-hover-bg: #f3f6ee;
+  --btn-hover-text: #2b2a2a;
+
+  --bg: #2b2a2a;
+  --section-bg: #2b2a2a;
+  --card-bg: #373636;
+  --card-border: #555;
+  --card-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+
+  --text: rgba(255, 255, 255, 0.7);
+  --text-muted: rgba(255, 255, 255, 0.54);
+  --heading: #fff;
+  --border: #555;
+  --code-bg: #23252f;
+
+  --navbar-bg: #2b2a2a;
+  --navbar-shadow: 0 0.125rem 0.25rem rgba(255, 255, 255, 0.11);
+  --navbar-link: rgba(255, 255, 255, 0.75);
+  --navbar-link-active: #fff;
+  --footer-text: rgba(255, 255, 255, 0.54);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* The hidden attribute must win over any display rule below (modals, dropdowns). */
+[hidden] { display: none !important; }
+
+html {
+  font-size: 13.86px;   /* matches the reference: scales up to 18px at >=58em */
+  scroll-padding-top: calc(var(--navbar-h) + 12px);
+}
+
+@media screen and (min-width: 58em) {
+  html { font-size: 18px; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+
+body {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--text);
+  background: var(--bg);
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+strong, b { font-weight: 600; }
+
+.container { max-width: 1140px; margin: 0 auto; padding: 0 1.25rem; }
+
+a { color: var(--primary); text-decoration: none; }
+a:hover { color: var(--link-hover); text-decoration: underline; }
+
+img { max-width: 100%; display: block; }
+
+h1, h2, h3 {
+  font-family: var(--font-head);
+  font-weight: 400;
+  color: var(--heading);
+  line-height: 1.25;
+}
+h1 { font-size: 2.25rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.25rem; }
+
+pre, code { font-family: var(--font-mono); font-weight: 300; }
+
+/* ==========================================================================
+   Navbar
+   ========================================================================== */
+
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  height: var(--navbar-h);
+  background: var(--navbar-bg);
+  box-shadow: var(--navbar-shadow);
+  font-size: 0.77rem;   /* ~13.9px at the 18px base */
+}
+
+.navbar-inner { display: flex; align-items: center; height: 100%; gap: 1rem; }
+
+.navbar-brand {
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--navbar-link-active);
+  white-space: nowrap;
+}
+.navbar-brand:hover { color: var(--navbar-link-active); text-decoration: none; }
+
+.navbar-nav { display: flex; align-items: center; flex: 1; justify-content: space-between; }
+
+.nav-links { display: flex; list-style: none; gap: 0.25rem; }
+
+.nav-link {
+  display: block;
+  padding: 0.5rem 0.9rem;
+  font-weight: 400;
+  color: var(--navbar-link);
+}
+.nav-link:hover { color: var(--navbar-link-active); text-decoration: none; }
+.nav-link.active { color: var(--navbar-link-active); font-weight: 700; }
+
+.nav-tools { display: flex; align-items: center; gap: 0.25rem; }
+
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px; height: 36px;
+  border: none;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--navbar-link);
+  cursor: pointer;
+  font-size: 1rem;
+}
+.icon-btn:hover { color: var(--navbar-link-active); }
+
+/* Theme dropdown */
+.theme-menu { position: relative; }
+
+.theme-dropdown {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 6px);
+  min-width: 140px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 3px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  padding: 0.35rem;
+  display: flex;
+  flex-direction: column;
+}
+.theme-dropdown button {
+  text-align: left;
+  padding: 0.45rem 0.7rem;
+  border: none;
+  background: transparent;
+  font-family: var(--font-body);
+  color: var(--text);
+  font-size: 0.77rem;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.theme-dropdown button:hover { background: var(--code-bg); }
+.theme-dropdown button.selected { color: var(--heading); font-weight: 700; }
+
+/* Mobile nav toggle */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 40px; height: 40px;
+  margin-left: auto;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.nav-toggle span {
+  display: block;
+  height: 2px;
+  width: 22px;
+  margin: 0 auto;
+  background: var(--navbar-link-active);
+  border-radius: 2px;
+}
+
+/* ==========================================================================
+   Search overlay
+   ========================================================================== */
+
+.search-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: var(--bg);
+  padding-top: 15vh;
+}
+.search-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; }
+.search-input {
+  width: 100%;
+  padding: 0.9rem 1.1rem;
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  color: var(--text);
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  outline: none;
+}
+.search-input:focus { border-color: var(--primary); }
+.search-hint { margin-top: 1rem; color: var(--text-muted); font-size: 0.9rem; }
+
+/* ==========================================================================
+   Sections
+   ========================================================================== */
+
+.home-section { padding: 110px 0; background: var(--section-bg); }
+.home-section:first-of-type { padding-top: calc(var(--navbar-h) + 50px); }
+
+/* Section title in a left column, content on the right (stacks on small screens) */
+.section-grid {
+  display: grid;
+  grid-template-columns: 1fr 2.2fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.section-heading { margin-bottom: 1.5rem; }
+
+/* ==========================================================================
+   About / biography
+   ========================================================================== */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+.about-sidebar { text-align: center; }
+
+.avatar {
+  width: 270px;
+  height: 270px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 1.25rem;
+}
+
+.person-name { font-size: 1.5rem; margin-bottom: 0.35rem; }
+.person-role { font-size: 1rem; color: var(--text-muted); margin-bottom: 0.6rem; }
+.person-org { font-size: 0.95rem; margin-bottom: 0.3rem; }
+.person-org a { color: var(--text-muted); }
+.person-org a:hover { color: var(--primary); }
+
+.social-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-top: 1.1rem;
+}
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  color: var(--text);
+}
+.social-links a:hover { color: var(--primary); }
+.social-links i { font-size: 1.15rem; }   /* ~20px, matching the old inline icons */
+
+.greeting { margin-bottom: 1.1rem; }
+.bio { margin-bottom: 1rem; }
+
+.cv-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  margin-top: 2.25rem;
+}
+
+.cv-title { font-size: 1.25rem; margin-bottom: 1rem; }
+
+.cv-list { list-style: none; }
+.cv-list li { display: flex; gap: 0.6rem; padding: 0.5rem 0; }
+.cv-icon { flex-shrink: 0; margin-top: 0.25rem; color: var(--text); }
+.cv-list h3 { font-size: 1rem; font-weight: 600; }
+.cv-loc { font-size: 0.9rem; color: var(--text-muted); }
+
+/* ==========================================================================
+   Cards (projects, posts, featured publications)
+   ========================================================================== */
+
+.card-stack { display: grid; gap: 1.25rem; }
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 3px;
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+}
+
+.card-image img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+
+.card-text { padding: 1.25rem 1.4rem 1.4rem; }
+.card-text h2 { font-size: 1.2rem; margin-bottom: 0.5rem; }
+.card-text h2 a { color: var(--heading); }
+.card-text h2 a:hover { color: var(--primary); text-decoration: none; }
+.card-text p { font-size: 0.85rem; color: var(--text); }
+
+.post-date { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.5rem; }
+
+/* Research topic cards: icon + title line, italic supervisor line */
+.topic-card h2 a { display: inline-flex; align-items: center; gap: 0.55rem; }
+.topic-card h2 a svg { flex-shrink: 0; }
+.topic-super { font-size: 0.85rem; color: var(--text-muted); }
+
+/* Publications: authors and venue above the title */
+.pub-authors { font-size: 0.85rem; color: var(--text); margin-bottom: 0.1rem; }
+.pub-authors strong { font-weight: 600; }
+.pub-meta { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.9rem; }
+.pub-card h2 { margin-bottom: 0.6rem; }
+.pub-abstract { font-size: 0.85rem; color: var(--text); margin-bottom: 1rem; }
+
+.pub-links { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-body);
+  font-weight: 400;
+  border-radius: 3px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+.btn:hover { text-decoration: none; }
+
+.btn-outline {
+  color: var(--primary);
+  background: transparent;
+  border: 1px solid var(--primary);
+}
+.btn-outline:hover { color: var(--btn-hover-text); background: var(--btn-hover-bg); }
+
+.btn-sm { font-size: 0.72rem; padding: 0.25rem 0.55rem; gap: 0.3rem; }
+.btn-sm svg { width: 13px; height: 13px; flex-shrink: 0; }
+
+/* Other publications: citation list */
+.pub-list { list-style: none; }
+.pub-list-item { padding: 1.25rem 0; border-bottom: 1px solid var(--border); }
+.pub-list-item:first-child { padding-top: 0; }
+.citation { font-size: 0.9rem; margin-bottom: 0.7rem; }
+
+/* ==========================================================================
+   Cite modal
+   ========================================================================== */
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+}
+.modal {
+  width: 100%;
+  max-width: 620px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 3px;
+  padding: 1.4rem;
+}
+.modal-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; }
+.modal-header h2 { font-size: 1.2rem; }
+.cite-text {
+  background: var(--code-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 3px;
+  padding: 1rem;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  overflow-x: auto;
+  color: var(--text);
+}
+.modal-footer { display: flex; gap: 0.5rem; margin-top: 1rem; justify-content: flex-end; }
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.site-footer {
+  padding: 2.5rem 0;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--footer-text);
+}
+.site-footer p + p { margin-top: 0.4rem; }
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+
+@media (max-width: 960px) {
+  .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .section-grid { grid-template-columns: 1fr; gap: 0; }
+}
+
+@media (max-width: 768px) {
+  .nav-toggle { display: flex; }
+
+  .navbar-nav {
+    display: none;
+    position: absolute;
+    top: var(--navbar-h);
+    left: 0; right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    background: var(--navbar-bg);
+    border-bottom: 1px solid var(--border);
+    box-shadow: var(--navbar-shadow);
+    padding: 0.75rem 1.25rem 1rem;
+  }
+  .navbar-nav.open { display: flex; }
+  .nav-links { flex-direction: column; gap: 0; }
+  .nav-link { padding: 0.6rem 0.25rem; }
+  .nav-tools { margin-top: 0.5rem; }
+
+  .cv-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .home-section { padding: 60px 0; }
+  .home-section:first-of-type { padding-top: calc(var(--navbar-h) + 40px); }
+  h1 { font-size: 1.8rem; }
+  .avatar { width: 220px; height: 220px; }
+}
+
+/* ==========================================================================
+   ADDITIONS (July 2026) — everything below extends the original template.
+   Nothing above this line was modified. New pieces: the Selected-work
+   horizontal scroller, media/motif card headers, section sub-line, and a
+   larger button size for case-study pages.
+   ========================================================================== */
+
+/* One-line intro under a section heading (left column) */
+.section-sub { font-size: 0.85rem; color: var(--text-muted); }
+
+/* --- Selected work: horizontal scroller ---------------------------------- */
+
+.work-scroller-wrap { min-width: 0; }   /* lets the grid column shrink so overflow works */
+
+.scroller-nav { display: flex; gap: 0.4rem; justify-content: flex-end; margin-bottom: 0.8rem; }
+
+.scroller-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px; height: 34px;
+  border: 1px solid var(--primary);
+  border-radius: 3px;
+  background: transparent;
+  color: var(--primary);
+  cursor: pointer;
+  transition: color 0.15s ease, background-color 0.15s ease, opacity 0.15s ease;
+}
+.scroller-btn:hover:not(:disabled) { background: var(--btn-hover-bg); color: var(--btn-hover-text); }
+.scroller-btn:disabled { opacity: 0.35; cursor: default; }
+
+.work-scroller {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: min(320px, 84%);
+  gap: 1.1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 2px 2px 0.9rem;              /* room for card shadows + scrollbar */
+  scrollbar-width: thin;
+  -webkit-overflow-scrolling: touch;
+}
+.work-scroller:focus-visible { outline: 2px solid var(--primary); outline-offset: 4px; }
+
+.work-card { scroll-snap-align: start; display: flex; flex-direction: column; }
+.work-card .card-text { display: flex; flex-direction: column; flex: 1; }
+.work-card .card-text p { margin-bottom: 0; }
+
+/* Kicker label: what kind of work this box is (mono, quiet) */
+.work-kicker {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.4rem;
+}
+
+/* Link row pinned to the card's bottom edge so card heights stay even */
+.work-links { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-top: auto; padding-top: 0.9rem; }
+
+/* Icon-motif header for boxes without a photo/screenshot (matches 16:9 media) */
+.card-motif {
+  aspect-ratio: 16 / 9;
+  display: grid;
+  place-items: center;
+  background: var(--code-bg);
+  color: var(--primary);
+  border-bottom: 1px solid var(--card-border);
+  font-size: 2.3rem;   /* sizes the Font Awesome motif icon (~42px) */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .work-scroller { scroll-behavior: auto; }
+}
+
+/* --- Case-study pages ----------------------------------------------------- */
+
+.btn-lg { font-size: 0.85rem; padding: 0.55rem 1rem; gap: 0.45rem; }
+.btn-lg svg { width: 16px; height: 16px; flex-shrink: 0; }
+
+.case-kicker {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.6rem;
+}
+.case-lede { font-size: 1.05rem; margin-bottom: 1rem; }
+.case-block { margin-top: 2.2rem; }
+.case-block h2 { margin-bottom: 0.6rem; }
+.case-actions { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.4rem; }
+.case-note { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.6rem; }
+.case-credits { font-size: 0.85rem; color: var(--text-muted); }
